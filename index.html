@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="calc">
+    <h2>Калькулятор площади прямоугольника</h2>
+    <label  for="a">a=
+        <input id="a" type="text">
+    </label>
+    <label  for="b">b=
+        <input id="b" type="text">
+    </label>
+    
+        <button  onclick="calc1()">Посчитать</button>
+        <div id="result" for=""></div>
+</div>
+
+<div class="coursesale">
+    <h2>Калькулятор стоимости обучения</h2>
+    <label for="">
+        Курс:
+        <select name="" id="coursename" oninput="coursesale()">
+            <option value="none">Выберите курс</option>
+            <option value="py">Pyton</option>
+            <option value="fr">Frontend</option>
+            <option value="ux">UX/UI</option>
+        </select>
+    </label>
+        <label id="procent" for="">
+            Скидка:
+            <input type="range" min="0" max="50" step="5" value="0" oninput="coursesale()" id="discountRange">
+        <span id="discountValue">0%</span>
+    </label>
+    <label for="">
+        Сумма:
+        <input type="text" id="sale" readonly >
+    </label>
+
+</div>
+
+
+<div class="rgistration">
+    <h2>Оставить заявку</h2>
+    <label for="name1">
+        Имя:
+        <input type="text" oninput="validateForm()" id="name1">
+    </label>
+    <label for="country">Страна:
+        <select onchange="country(); validateForm()" id="country">
+            <option value="">Выберите страну</option>
+            <option value="+998">Узбеистан</option>
+            <option value="+7">Казахстан</option>
+            <option value="+1">Америка</option>
+        </select>
+    </label>
+    <label for="phonenumber">
+        Телефон:
+        <input id="phonenumber" type="text" placeholder="Введите номер телефона" oninput="validateForm()">
+    </label>
+    <label for="">
+        <input type="checkbox" id="checkbox" onchange="validateForm()" required>
+        Подтвердите обработку данных
+    </label>
+    <button id="submitBtn" disabled>Отправить</button>
+    
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
