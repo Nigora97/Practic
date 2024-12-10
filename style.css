@@ -11,3 +11,41 @@ label {
 #procent{
     display: flex;
 }
+
+
+body {
+    background-color: burlywood;
+}
+
+@media (max-width:1280px){
+body{
+    background-color: red;
+}
+}
+
+
+
+@media (max-width:700px){
+    body{
+        background-color: pink;
+    }
+    }
+
+
+    
+@media (max-width:500px){
+    body{
+        background-color: yellow;
+    }
+    }
+
+
+    
+@media (max-width:375px){
+    body{
+        background-color: green;
+    }
+    }
+
+
+  
